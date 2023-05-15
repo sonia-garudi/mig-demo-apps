@@ -5,7 +5,7 @@ items:
     kind: Service
     metadata:
       annotations:
-        template.openshift.io/expose-uri: mongodb://{.spec.clusterIP}:{.spec.ports[?(.name=="mongo")].port}?&connect=direct
+        template.openshift.io/expose-uri: mongodb://{.spec.clusterIP}:{.spec.ports[?(.name=="mongo")].port}/?&connect=direct
       name: mongo
       namespace: mongo-persistent
       labels:
